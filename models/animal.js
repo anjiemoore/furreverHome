@@ -1,0 +1,12 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const animalSchema = new Schema({
+  name: { type: String, required: true },
+  about: { type: String, required: true },
+  date: { type: Date, default: Date.now }
+});
+
+const Animal = mongoose.model("Book", animalSchema);
+
+module.exports = Animal;
