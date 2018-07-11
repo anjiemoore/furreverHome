@@ -7,6 +7,6 @@ const animalSchema = new Schema({
   date: { type: Date, default: Date.now }
 });
 
-const Animal = mongoose.model("Book", animalSchema);
+const Animal = mongoose.model("Animal", animalSchema);
 
 module.exports = Animal;
