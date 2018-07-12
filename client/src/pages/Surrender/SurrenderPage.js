@@ -16,9 +16,13 @@ class surrenderPage extends Component {
       }
     
       handleSubmit(event) {
-        API.saveAnimal();
-        alert('Thanks for your post!');
         event.preventDefault();
+        API.saveAnimal({
+          name: this.state.name,
+          image: this.state.image,
+          about: this.state.about
+        });
+        alert('Thanks for your post!');
       }
 
   render() {

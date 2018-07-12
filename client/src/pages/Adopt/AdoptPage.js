@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Card from '../../components/Card/AnimalCards';
 import API from '../../utils/API';
 
+
 class AllAnimals extends Component {
 
     state = {
@@ -20,8 +21,9 @@ class AllAnimals extends Component {
 
     render() {
         return (
-            <div>
+        <div>
             {this.state.animals.map(animal => (
+
                 <Card
                     id={animal.id}
                     key={animal.id}
@@ -30,7 +32,7 @@ class AllAnimals extends Component {
                     date={animal.date}
                 />
             ))}
-            </div>
+        </div>
         )
     }
 }
